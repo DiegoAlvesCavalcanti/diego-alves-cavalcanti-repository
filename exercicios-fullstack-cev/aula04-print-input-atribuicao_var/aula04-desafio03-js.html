@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aula04-desafio03-js.html</title>
+    </head>
+    <body>
+        <label for="number1">Número 1 :</label>
+        <input type="text" name="number1" id="number1"><br>
+        <label for="number2">Número 2 :</label>
+        <input type="text" name="number2" id="number2"><br>
+        <input type="submit" onclick="submit()">
+        <br>
+        <br>
+        <span id="resposta"></span>
+
+        <script>
+            function submit() {
+                let num1 = document.getElementById('number1').value;
+                let num2 = document.getElementById('number2').value;
+                let num1_valor = Number(num1);
+                let num2_valor = Number(num2);
+
+                let resp = num1_valor + num2_valor;
+                resposta.innerHTML = `A soma entre ${num1} e ${num2} resulta em ${resp}`;
+            }
+        </script>
+    </body>
+</html>

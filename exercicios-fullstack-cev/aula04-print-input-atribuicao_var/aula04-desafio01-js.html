@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aula04-desafio01-js</title>
+    </head>
+    <body>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">   <!--nome--> 
+        <input type="submit" onclick="submit()">
+        <br>
+        <br>
+        <span id="resposta"></span>    <!--resposta-->  
+
+        <script>
+            function submit() {
+                let nome = document.getElementById('nome');
+                let resposta = document.getElementById('resposta');
+                resposta.innerHTML = `Olá ${nome.value}! Prazer em te conhecer!`;
+                
+                console.log(nome.value);
+        }
+        </script>
+    </body>
+</html>
